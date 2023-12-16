@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <!-- Thumbnail Image -->
+        <ImageView
+            android:id="@+id/nearbyLocationThumbnail"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_launcher_background" />
+
+        <!-- Mission Name -->
+        <TextView
+            android:id="@+id/locationName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            tools:text="UB City"
+            app:layout_constraintStart_toEndOf="@id/nearbyLocationThumbnail"
+            app:layout_constraintTop_toTopOf="@id/nearbyLocationThumbnail"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Rocket Name -->
+        <TextView
+            android:id="@+id/locationAddress"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            tools:text="Street no 12"
+            app:layout_constraintStart_toStartOf="@id/locationName"
+            app:layout_constraintTop_toBottomOf="@id/locationName"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Launch Status -->
+        <TextView
+            android:id="@+id/locationExtendedAddress"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            tools:text="Hyderabad"
+            app:layout_constraintStart_toStartOf="@id/locationAddress"
+            app:layout_constraintTop_toBottomOf="@id/locationAddress"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
